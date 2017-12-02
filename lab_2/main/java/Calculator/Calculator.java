@@ -72,6 +72,7 @@ public class Calculator {
                 try {
                     st.add(Double.parseDouble(operand));
                 }catch (Exception e){
+                    System.out.println(e);
                     System.out.println("вы ввели недопустимый символ");
                     break;
                 }
