@@ -1,0 +1,78 @@
+2017-12-05 00:37:37,689 INFO  [main] Sign In page opened
+2017-12-05 00:39:07,889 INFO  [main] Sign In page opened
+2017-12-05 00:39:16,352 INFO  [main] Sign In performed
+2017-12-05 01:13:34,991 INFO  [main] Sign In page opened
+2017-12-05 01:15:46,653 INFO  [main] Main page opened
+2017-12-05 01:15:49,997 INFO  [main] plan button is clicked
+2017-12-05 01:18:12,349 INFO  [main] Main page opened
+2017-12-05 01:18:14,934 INFO  [main] plan button is clicked
+2017-12-05 01:21:05,223 INFO  [main] Main page opened
+2017-12-05 01:21:11,104 INFO  [main] plan button is clicked
+2017-12-05 01:26:05,361 INFO  [main] Main page opened
+2017-12-05 01:26:08,285 INFO  [main] plan button is clicked
+2017-12-05 01:28:20,379 INFO  [main] Main page opened
+2017-12-05 01:28:23,114 INFO  [main] plan button is clicked
+2017-12-05 01:28:23,392 INFO  [main] hotels button is clicked
+2017-12-05 01:36:48,173 INFO  [main] Main page opened
+2017-12-05 01:36:52,305 INFO  [main] plan button is clicked
+2017-12-05 01:38:25,792 INFO  [main] Main page opened
+2017-12-05 01:38:28,454 INFO  [main] plan button is clicked
+2017-12-05 01:38:28,705 INFO  [main] hotels button is clicked
+2017-12-05 01:56:32,542 INFO  [main] Main page opened
+2017-12-05 01:56:38,144 INFO  [main] plan button is clicked
+2017-12-05 01:56:38,331 INFO  [main] hotels button is clicked
+2017-12-05 01:56:38,487 INFO  [main] switched to the iframe
+2017-12-05 01:56:38,980 INFO  [main] search hotel performed
+2017-12-05 02:01:12,637 INFO  [main] Main page opened
+2017-12-05 02:01:15,642 INFO  [main] plan button is clicked
+2017-12-05 02:01:15,971 INFO  [main] hotels button is clicked
+2017-12-05 02:01:16,097 INFO  [main] switched to the iframe
+2017-12-05 02:01:16,743 INFO  [main] search hotel performed
+2017-12-05 02:29:25,447 INFO  [main] Main page opened
+2017-12-05 02:29:31,714 INFO  [main] plan button is clicked
+2017-12-05 02:29:31,881 INFO  [main] hotels button is clicked
+2017-12-05 02:29:32,015 INFO  [main] switched to the iframe
+2017-12-05 02:29:32,451 INFO  [main] search hotel performed
+2017-12-05 02:32:19,017 INFO  [main] Main page opened
+2017-12-05 02:33:06,733 INFO  [main] Main page opened
+2017-12-05 02:33:09,748 INFO  [main] plan button is clicked
+2017-12-05 02:33:10,034 INFO  [main] hotels button is clicked
+2017-12-05 02:33:10,118 INFO  [main] switched to the iframe
+2017-12-05 02:33:10,572 INFO  [main] search hotel performed
+2017-12-05 02:35:45,858 INFO  [main] Main page opened
+2017-12-05 02:36:22,968 INFO  [main] Main page opened
+2017-12-05 02:36:25,471 INFO  [main] plan button is clicked
+2017-12-05 02:36:25,900 INFO  [main] hotels button is clicked
+2017-12-05 02:36:26,044 INFO  [main] switched to the iframe
+2017-12-05 02:36:26,657 INFO  [main] search hotel performed
+2017-12-05 02:36:31,416 INFO  [main] title: Air Arabia: Отели в Ереван. Забронируйте отель прямо сейчас!
+2017-12-05 02:38:17,912 INFO  [main] Main page opened
+2017-12-05 02:38:20,573 INFO  [main] plan button is clicked
+2017-12-05 02:38:20,844 INFO  [main] hotels button is clicked
+2017-12-05 02:38:20,930 INFO  [main] switched to the iframe
+2017-12-05 02:38:21,517 INFO  [main] search hotel performed
+2017-12-05 02:40:00,215 INFO  [main] Main page opened
+2017-12-05 02:40:05,589 INFO  [main] plan button is clicked
+2017-12-05 02:40:05,856 INFO  [main] hotels button is clicked
+2017-12-05 02:40:05,941 INFO  [main] switched to the iframe
+2017-12-05 02:40:06,415 INFO  [main] search hotel performed
+2017-12-05 03:57:07,290 INFO  [main] Main page opened
+2017-12-05 04:18:53,475 INFO  [main] Main page opened
+2017-12-05 04:21:08,440 INFO  [main] Main page opened
+2017-12-05 04:21:08,622 INFO  [main] click on dropdown to change language
+2017-12-05 04:21:08,878 INFO  [main] choose language
+2017-12-05 04:22:19,806 INFO  [main] Main page opened
+2017-12-05 04:22:20,077 INFO  [main] click on dropdown to change language
+2017-12-05 04:22:20,189 INFO  [main] choose language
+2017-12-05 04:23:30,105 INFO  [main] Main page opened
+2017-12-05 04:23:30,267 INFO  [main] click on dropdown to change language
+2017-12-05 04:23:30,491 INFO  [main] choose language
+2017-12-05 04:24:36,016 INFO  [main] Main page opened
+2017-12-05 04:24:36,173 INFO  [main] click on dropdown to change language
+2017-12-05 04:24:36,408 INFO  [main] choose language
+2017-12-05 04:32:57,437 INFO  [main] Main page opened
+2017-12-05 04:32:57,663 INFO  [main] click on dropdown to change language
+2017-12-05 04:32:57,853 INFO  [main] choose language
+2017-12-05 04:34:48,217 INFO  [main] Main page opened
+2017-12-05 04:34:48,687 INFO  [main] click on dropdown to change language
+2017-12-05 04:34:48,855 INFO  [main] choose language
