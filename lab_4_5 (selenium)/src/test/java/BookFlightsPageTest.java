@@ -42,6 +42,12 @@ public class BookFlightsPageTest {
         steps.isOnRelatedPage();
     }
 
+    @Test
+    public void performOpenHelpPage(){
+        steps.openHelpPage();
+        steps.isOnHelpPage();
+    }
+
     @AfterMethod(description = "Stop Browser")
     public void stopBrowser() {
         steps.closeDriver();

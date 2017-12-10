@@ -122,4 +122,15 @@ public class Steps {
         Assert.assertTrue("title should contain Payment options | Air Arabia",
                 driver.getTitle().contains("Payment options | Air Arabia"));
     }
+
+    public void openHelpPage(){
+        BookFlightsPage bookFlightsPage = new BookFlightsPage(driver);
+        bookFlightsPage.open();
+        bookFlightsPage.openHelpPage();
+    }
+
+    public void isOnHelpPage(){
+        Assert.assertTrue("title should contain Contact Us | Air Arabia",
+                driver.getTitle().contains("Contact Us | Air Arabia"));
+    }
 }

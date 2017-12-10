@@ -38,6 +38,11 @@ public class MainPageTest {
     @Test
     public void performChangeLanguage(){
         steps.changeLanguage();
+        try {
+            Thread.sleep(10000);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
         steps.isLanguageChanged();
     }
 

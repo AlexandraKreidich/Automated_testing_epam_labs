@@ -45,7 +45,9 @@ public class BookFlightsPage extends Page {
     WebElement cookieBtn;
     /*--------------------------------------------------*/
 
-    /*------- * ------------*/
+    /*------- Go To The Help Page ------------*/
+    @FindBy(linkText = "HELP")
+    WebElement helpBtn;
     /*--------------------------------------------------*/
 
     @Override
@@ -74,6 +76,10 @@ public class BookFlightsPage extends Page {
         }
         findMore.click();
         logger.info("find more button was clicked");
+    }
+
+    public void openHelpPage(){
+        helpBtn.click();
     }
 
 }
