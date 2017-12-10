@@ -3,9 +3,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import steps.Steps;
-import driver.Driver;
-
-import java.util.concurrent.TimeUnit;
 
 public class MainPageTest {
     private Steps steps;
