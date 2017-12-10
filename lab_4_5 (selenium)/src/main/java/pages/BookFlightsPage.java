@@ -7,6 +7,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import java.lang.Object;
 
 
 public class BookFlightsPage extends Page {
@@ -34,10 +37,15 @@ public class BookFlightsPage extends Page {
     private WebElement iframe;
     /*--------------------------------------------------*/
 
-    /*------------------- Featured Flights -------------*/
+    /*------------------- Related Pages  -------------*/
+    @FindBy(linkText = "FIND OUT MORE")
+    WebElement findMore;
+
+    @FindBy(xpath = "//div[@id='popup-buttons']/button[@class='agree-button']")
+    WebElement cookieBtn;
     /*--------------------------------------------------*/
 
-    /*------- Related Pages -> Where We Fly ------------*/
+    /*------- * ------------*/
     /*--------------------------------------------------*/
 
     @Override
@@ -54,6 +62,18 @@ public class BookFlightsPage extends Page {
         input.sendKeys(place);
         searchBtn.click();
         logger.info("search hotel performed");
+    }
+
+    public void openRelatedPage(){
+        cookieBtn.click();
+        logger.info("the cookie btn was clicked");
+        try {
+            Thread.sleep(5000);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        findMore.click();
+        logger.info("find more button was clicked");
     }
 
 }

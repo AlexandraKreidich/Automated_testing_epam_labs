@@ -8,7 +8,7 @@ import driver.Driver;
 
 import java.util.concurrent.TimeUnit;
 
-public class BookFlightsPage {
+public class BookFlightsPageTest {
     private Steps steps;
 
     private final String PLACE = "Ереван, Армения";
@@ -34,6 +34,12 @@ public class BookFlightsPage {
             }
         }
 
+    }
+
+    @Test
+    public void performSearchFlight(){
+        steps.openRelatedPage();
+        steps.isOnRelatedPage();
     }
 
     @AfterMethod(description = "Stop Browser")

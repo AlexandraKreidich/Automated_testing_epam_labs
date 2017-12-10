@@ -72,7 +72,54 @@ public class Steps {
 
     public void isLanguageChanged(){
         WebElement bodyTag = driver.findElement(By.xpath("//body"));
-        Assert.assertTrue("Langeage should be Deutsch",
+        driver.manage().timeouts().setScriptTimeout(10, TimeUnit.SECONDS);
+        Assert.assertTrue("Language should be Deutsch",
                 bodyTag.getAttribute("data-lang").equals("de"));
+    }
+
+    public void chooseWhereToFly(){
+        DestinationsPage destinationsPage = new DestinationsPage(driver);
+        destinationsPage.open();
+        destinationsPage.chooseWhereToFly();
+    }
+
+    public void isOnCountryToFly(){
+        Assert.assertTrue("title should be equals Flights to Abadan | Air Arabia",
+                driver.getTitle().equals("Flights to Abadan | Air Arabia"));
+    }
+
+    public WebElement readNews(){
+        DestinationsPage destinationsPage = new DestinationsPage(driver);
+        destinationsPage.open();
+        destinationsPage.readNews();
+        WebElement link = destinationsPage.getNewsLink();
+        return link;
+    }
+
+    public void isOnNewsPage(WebElement link){
+        Assert.assertTrue("title should be equals with the link text",
+                link.getText().equals(driver.getTitle()));
+    }
+
+    public void openFaceBook(){
+        DestinationsPage destinationsPage = new DestinationsPage(driver);
+        destinationsPage.open();
+        destinationsPage.openFaceBook();
+    }
+
+    public void isOnFaceBookPage(){
+        Assert.assertTrue("title should contain Air Arabia - Главная",
+                driver.getTitle().contains("Air Arabia - Главная"));
+    }
+
+    public void openRelatedPage(){
+        BookFlightsPage bookFlightsPage = new BookFlightsPage(driver);
+        bookFlightsPage.open();
+        bookFlightsPage.openRelatedPage();
+    }
+
+    public void isOnRelatedPage(){
+        Assert.assertTrue("title should contain Payment options | Air Arabia",
+                driver.getTitle().contains("Payment options | Air Arabia"));
     }
 }
