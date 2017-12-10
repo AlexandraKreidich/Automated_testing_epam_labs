@@ -7,7 +7,8 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.support.FindBy;
 import org.apache.logging.log4j.LogManager;
 import org.openqa.selenium.support.PageFactory;
-
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -54,6 +55,20 @@ public class MainPage extends Page{
     WebElement languageToChoose;
     /*-------------------------------------------*/
 
+    /*----------- For Searching Cars ------------*/
+    @FindBy(xpath = "//li[@aria-labelledby='ui-id-3']")
+    WebElement tabLink;
+
+    @FindBy(id = "pickupDate")
+    WebElement pickUpDate;
+
+    @FindBy(id="returnDate")
+    WebElement returnDate;
+
+    @FindBy(className = "carsearchbutton")
+    WebElement searchInput;
+    /*-------------------------------------------*/
+
     @Override
     public void open() {
         webDriver.navigate().to(BASE_URL);
@@ -81,5 +96,13 @@ public class MainPage extends Page{
         languageToChoose.click();
         Driver.getDriver().manage().timeouts().setScriptTimeout(30, TimeUnit.SECONDS);
         logger.info("choose language");
+    }
+
+    public void searchCar(String _picUpDate, String _returnDate){
+        tabLink.click();
+        (new WebDriverWait(Driver.getDriver(), 10)).until(ExpectedConditions.visibilityOf(searchInput));
+        pickUpDate.sendKeys(_picUpDate);
+        returnDate.sendKeys(_returnDate);
+        searchInput.submit();
     }
 }

@@ -10,8 +10,8 @@ import org.openqa.selenium.WebElement;
 import pages.MainPage;
 import pages.BookFlightsPage;
 import pages.DestinationsPage;
-
 import java.util.concurrent.TimeUnit;
+
 
 public class Steps {
 
@@ -43,6 +43,17 @@ public class Steps {
         MainPage mainPage = new MainPage(driver);
         mainPage.open();
         mainPage.login(email, password);
+    }
+
+    public void searchCar(String pickUpDate, String returnDate){
+        MainPage mainPage = new MainPage(driver);
+        mainPage.open();
+        mainPage.searchCar(pickUpDate, returnDate);
+    }
+
+    public void isOnCarsPage(){
+        Assert.assertTrue("title should contain Car hire",
+                driver.getTitle().contains("Car hire"));
     }
 
     public boolean isSignedIn() {
@@ -133,4 +144,20 @@ public class Steps {
         Assert.assertTrue("title should contain Contact Us | Air Arabia",
                 driver.getTitle().contains("Contact Us | Air Arabia"));
     }
+
+    public void openBookFlightsPage(){
+        BookFlightsPage bookFlightsPage = new BookFlightsPage(driver);
+        bookFlightsPage.open();
+    }
+
+    public void openMainPage(){
+        MainPage mainPage = new MainPage(driver);
+        mainPage.open();
+    }
+
+    public void openDestinationPage(){
+        DestinationsPage destinationsPage = new DestinationsPage(driver);
+        destinationsPage.open();
+    }
+
 }

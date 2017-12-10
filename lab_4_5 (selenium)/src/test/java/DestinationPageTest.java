@@ -1,8 +1,10 @@
 import driver.Driver;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
 import steps.Steps;
 
@@ -10,7 +12,10 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 public class DestinationPageTest {
+
     private Steps steps;
+
+    private final Logger logger  = LogManager.getRootLogger();
 
     @BeforeMethod(description = "Init browser")
     public void setUp() {
@@ -59,5 +64,14 @@ public class DestinationPageTest {
                 steps.isOnFaceBookPage();
             }
         }
+    }
+
+    @Test
+    public void testLoadingPage(){
+        steps.openDestinationPage();
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        long loadEventEnd = (Long) js.executeScript("return window.performance.timing.loadEventEnd;");
+        long navigationStart = (Long) js.executeScript("return window.performance.timing.navigationStart;");
+        logger.info("Page Load Time is " + (loadEventEnd - navigationStart)/1000 + " seconds.");
     }
 }

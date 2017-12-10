@@ -1,8 +1,10 @@
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import java.util.Set;
-
+import org.openqa.selenium.JavascriptExecutor;
 import steps.Steps;
 import driver.Driver;
 
@@ -12,6 +14,8 @@ public class BookFlightsPageTest {
     private Steps steps;
 
     private final String PLACE = "Ереван, Армения";
+
+    private final Logger logger  = LogManager.getRootLogger();
 
     @BeforeMethod(description = "Init browser")
     public void setUp() {
@@ -47,6 +51,16 @@ public class BookFlightsPageTest {
         steps.openHelpPage();
         steps.isOnHelpPage();
     }
+
+    @Test
+    public void testLoadingPage(){
+        steps.openBookFlightsPage();
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        long loadEventEnd = (Long) js.executeScript("return window.performance.timing.loadEventEnd;");
+        long navigationStart = (Long) js.executeScript("return window.performance.timing.navigationStart;");
+        logger.info("Page Load Time is " + (loadEventEnd - navigationStart)/1000 + " seconds.");
+    }
+
 
     @AfterMethod(description = "Stop Browser")
     public void stopBrowser() {
