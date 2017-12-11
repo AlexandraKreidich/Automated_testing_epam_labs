@@ -5,13 +5,14 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import java.util.Set;
 import org.openqa.selenium.JavascriptExecutor;
+import steps.BookFlightsPageSteps;
 import steps.Steps;
 import driver.Driver;
 
 import java.util.concurrent.TimeUnit;
 
 public class BookFlightsPageTest {
-    private Steps steps;
+    private BookFlightsPageSteps steps;
 
     private final String PLACE = "Ереван, Армения";
 
@@ -19,12 +20,12 @@ public class BookFlightsPageTest {
 
     @BeforeMethod(description = "Init browser")
     public void setUp() {
-        steps = new Steps();
+        steps = new BookFlightsPageSteps();
         steps.initBrowser();
     }
 
     @Test
-    public void performSearchHolel() {
+    public void performSearchHotel() {
         steps.searchHotel(PLACE);
         String parentWindow = Driver.getDriver().getWindowHandle();
         Set <String> handles =  Driver.getDriver().getWindowHandles();

@@ -1,4 +1,3 @@
-import driver.Driver;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
@@ -6,10 +5,12 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import steps.Steps;
+import steps.MainPageSteps;
+import driver.Driver;
 
 public class MainPageTest {
-    private Steps steps;
+
+    private MainPageSteps steps;
 
     private final Logger logger  = LogManager.getRootLogger();
 
@@ -25,7 +26,7 @@ public class MainPageTest {
 
     @BeforeMethod(description = "Init browser")
     public void setUp() {
-        steps = new Steps();
+        steps = new MainPageSteps();
         steps.initBrowser();
     }
 

@@ -6,20 +6,21 @@ import org.testng.annotations.BeforeMethod;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
+import steps.DestinationPageSteps;
 import steps.Steps;
 
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-public class DestinationPageTest {
+public class DestinationPageTest extends Steps {
 
-    private Steps steps;
+    private DestinationPageSteps steps;
 
     private final Logger logger  = LogManager.getRootLogger();
 
     @BeforeMethod(description = "Init browser")
     public void setUp() {
-        steps = new Steps();
+        steps = new DestinationPageSteps();
         steps.initBrowser();
     }
 
