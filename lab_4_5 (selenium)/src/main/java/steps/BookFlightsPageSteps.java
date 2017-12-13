@@ -2,6 +2,7 @@ package steps;
 
 import org.junit.Assert;
 
+import pages.AirewardsPage;
 import pages.BookFlightsPage;
 
 public class BookFlightsPageSteps extends Steps{
@@ -48,6 +49,9 @@ public class BookFlightsPageSteps extends Steps{
         bookFlightsPage.open();
     }
 
-
+    public void loadPage(){
+        BookFlightsPage bookFlightsPage = new BookFlightsPage(driver);
+        bookFlightsPage.loadPage();
+    }
 
 }

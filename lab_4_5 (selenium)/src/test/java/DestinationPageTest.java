@@ -1,4 +1,6 @@
 import driver.Driver;
+import steps.DestinationPageSteps;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterMethod;
@@ -6,13 +8,10 @@ import org.testng.annotations.BeforeMethod;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
-import steps.DestinationPageSteps;
-import steps.Steps;
-
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-public class DestinationPageTest extends Steps {
+public class DestinationPageTest {
 
     private DestinationPageSteps steps;
 
@@ -52,7 +51,7 @@ public class DestinationPageTest extends Steps {
     }
 
     @Test
-    public void performOpenTwitter(){
+    public void performOpenFaceBook(){
         steps.openFaceBook();
         String parentWindow = Driver.getDriver().getWindowHandle();
         Set<String> handles =  Driver.getDriver().getWindowHandles();

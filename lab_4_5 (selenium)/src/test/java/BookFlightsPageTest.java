@@ -62,7 +62,6 @@ public class BookFlightsPageTest {
         logger.info("Page Load Time is " + (loadEventEnd - navigationStart)/1000 + " seconds.");
     }
 
-
     @AfterMethod(description = "Stop Browser")
     public void stopBrowser() {
         steps.closeDriver();
